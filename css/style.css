@@ -61,7 +61,6 @@ header ul.nav-menu li a {
 }
 header ul.nav-menu :last-child {
   list-style: none;
-  margin-right: 0;
 }
 header li:hover {
   background-color: #2d2d2d;
@@ -470,15 +469,31 @@ footer {
 @media (max-width: 723px) {
   nav ul.nav-menu {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
-    flex-grow: 1;
+
   }
-  nav ul.nav-menu li {
-    width: 80%;
+
+	
+  header nav ul.nav-menu li {
+      margin-right:50%;
+      margin-left:50%;
   }
+	  header img.logo {
+    height: 80px;
+    grid-area: logo;
+    margin-top: 50px;
+    margin-left: 50%;
+	  }
+	  .wrapper-first img, .wrapper-second img, .wrapper-third img,.wrapper-fourth img, .wrapper-fifth img, .wrapper-sixth img {
+		  left: 50%;
+		  right:50%;
+		  margin-left: 50%;
+		  margin-right: 50%;
+	  }
   section.information {
     grid-template-areas: ".              h1        ." ".        img1   ." " .     img2       ." ".       img3    . " ".    img4      . " ".    img5       ." ".    img6      . ";
-    grid-template-columns: 20px 1fr 20px;
+    grid-template-columns: 10% 80% 10%;
   }
+
 }
